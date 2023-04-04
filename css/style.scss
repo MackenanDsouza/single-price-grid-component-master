@@ -30,7 +30,7 @@ main{
         width:700px;
         max-width: 80%;
        
-        border-radius: 0.5em;
+        border-radius: 0.25em;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         h1{
             color:$Cyan;
@@ -46,6 +46,8 @@ main{
         &__community{
             background-color: $Light-Gray;
             padding: 1.5em;
+            border-top-right-radius: inherit;
+            border-top-left-radius: inherit;
 
             p{
                 color:$Grayish-Blue;
@@ -100,6 +102,8 @@ main{
             background-color: $Cyan;
             color:$Light-Gray;
             padding: 1.5em;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
 
             p{
                 font-size:0.75rem;
@@ -134,8 +138,12 @@ main{
                 font-size: 1em !important;
             }
         }
+        &__subscription{
+            border-bottom-left-radius: inherit;
+        }
 
         &__whyus{
+            border-bottom-left-radius:0!important;
             h3{
                 margin-block-start: 0.1em;
             }

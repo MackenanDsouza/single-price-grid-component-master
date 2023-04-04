@@ -23,7 +23,7 @@ main {
 main .card {
   width: 700px;
   max-width: 80%;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 main .card h1 {
@@ -39,6 +39,8 @@ main .card__subtitle {
 main .card__community {
   background-color: hsl(204, 43%, 93%);
   padding: 1.5em;
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
 }
 main .card__community p {
   color: hsl(218, 22%, 67%);
@@ -85,6 +87,8 @@ main .card__whyus {
   background-color: hsl(179, 62%, 43%);
   color: hsl(204, 43%, 93%);
   padding: 1.5em;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 main .card__whyus p {
   font-size: 0.75rem;
@@ -109,6 +113,12 @@ main .card__whyus p {
   }
   .card__community p {
     font-size: 1em !important;
+  }
+  .card__subscription {
+    border-bottom-left-radius: inherit;
+  }
+  .card__whyus {
+    border-bottom-left-radius: 0 !important;
   }
   .card__whyus h3 {
     -webkit-margin-before: 0.1em;
