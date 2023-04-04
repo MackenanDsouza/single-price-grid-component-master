@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Karla;
+    src: url(../font/Karla/Karla-VariableFont_wght.ttf);
+}
+
+
+$DarkCyan: hsl(179, 61%, 41%);
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+*{box-sizing: border-box;}
+html,body{
+    font-family: Karla;
+    font-size: 16px;
+    background-color: $Grayish-Blue;
+    margin:0;
+
+   
+}
+
+main{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    .card{
+        width:700px;
+        max-width: 80%;
+       
+        border-radius: 0.5em;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        h1{
+            color:$Cyan;
+        }
+        &__title{
+            font-size:1.25rem;
+        }
+       
+        &__subtitle{
+            font-size:0.95rem;
+            color: $Bright-Yellow;
+        }
+        &__community{
+            background-color: $Light-Gray;
+            padding: 1.5em;
+
+            p{
+                color:$Grayish-Blue;
+                font-size: 0.75rem;
+                font-weight: 400;
+            }
+        }
+        &__subscription{
+            h2{
+                margin-block:0.7em;
+            }
+            color:$Light-Gray;
+            
+            background-color: $DarkCyan;
+            padding: 1em 1.5em;
+
+            &_cost{
+                display: flex;
+                align-items: center;
+                gap:0.75em;
+                padding:0.75em 0;
+                color:hsla(204, 43%, 93%,0.5); ;
+                span{
+                    font-weight: 700;
+                    font-size:2rem;
+                    color:$Light-Gray;
+                }
+
+              
+            }
+            button{
+                // width:80%;
+                border:none;
+                border-radius: 0.25em;
+                padding:1em 0;
+                margin:1em 0;
+
+
+                font-family: inherit;
+                font-size: 1em;
+                color:$Light-Gray;
+                background-color: $Bright-Yellow;
+                width:100%;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                &:hover{
+                    cursor:pointer;
+                    background-color: hsl(71, 87%, 58%);
+                }
+            }
+        }
+        &__whyus{
+            background-color: $Cyan;
+            color:$Light-Gray;
+            padding: 1.5em;
+
+            p{
+                font-size:0.75rem;
+                line-height: 1.25rem;
+                color:hsla(204, 43%, 93%,0.8); ;
+            }
+            
+        }
+    }
+}
+
+@media (min-width:40em) {
+    .card{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+     
+        
+        &__community
+        {
+            grid-row:1;
+            grid-column: 1/3;
+            
+            h1{
+                font-size: 1.5rem !important;
+            }
+            
+            h2
+            {
+                font-size: 1.1rem!important;
+            }
+            p{
+                font-size: 1em !important;
+            }
+        }
+
+        &__whyus{
+            h3{
+                margin-block-start: 0.1em;
+            }
+        }
+
+    
+    }
+
+
+    
+}
